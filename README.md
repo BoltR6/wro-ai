@@ -5,6 +5,6 @@ Written entirely in Rust given how, unlike VEX, there are no hardware safeguards
 
 
 ### Team
-Lead Programmer   | John W
-Software/Hardware | Drew O
-Lead Engineer     | Connor N
+* Lead Programmer   | John W
+* Software/Hardware | Drew O
+* Lead Engineer     | Connor N
