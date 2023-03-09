@@ -1,2 +1,1 @@
-# wro-ai
-WRO Future Engineers codebase
+# WRO Codebase
