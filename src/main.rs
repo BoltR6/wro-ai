@@ -8,17 +8,31 @@ pub struct Bot {
     angle_motor: Motor,
 }
 impl Bot {
-    fn drive_forward(voltage_percent: i8){
-        assert!(voltage_percent < 100 && voltage_percent > 100, "Given percent oob!");
+    pub fn drive_forward(&self, voltage_percent: i8){
+        assert!(voltage_percent >= -100 && voltage_percent <= 100, "Given percent oob!");
 
         //drive motor
+        print!("Good");
     }
-    fn drive_angle(angle_degrees: u16){
-        assert!(angle_degrees > 0 && angle_degrees < 360, "Provided angle must be within 0 and 360");
+    pub fn drive_angle(&self, angle_degrees: u16){
+        assert!(angle_degrees >= 0 && angle_degrees <= 360, "Provided angle must be within 0 and 360");
 
         //drive angle
+        print!("Good");
     }
 }
 fn main() {
-    
+    let bot = Bot {
+        drive_motor: Motor {
+            max_voltage: 125,
+            min_voltage: 125,
+            port: 0
+        },
+        angle_motor: Motor {
+            max_voltage: 125,
+            min_voltage: 125,
+            port: 0
+        }
+    };
+    bot.drive_forward(100);
 }
