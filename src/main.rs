@@ -14,5 +14,5 @@ fn main() {
         }
     };
     bot.drive_forward(100);
-    print!(" {}", bot.drive_motor.max_voltage);
+    println!("{}", bot.drive_motor.max_voltage);
 }
