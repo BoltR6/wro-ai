@@ -1,4 +1,6 @@
 mod bot;
+mod pathfinding;
+use pathfinding::visibolt::run;
 
 fn main() {
     let bot = bot::Bot {
@@ -15,4 +17,9 @@ fn main() {
     };
     bot.drive_forward(100);
     println!("{}", bot.drive_motor.max_voltage);
+    //run();
+    let instances = wgpu::Instance::new(wgpu::Backends::all());
+    for adapter in instances.enumerate_adapters(wgpu::Backends::all()) {
+        println!("{:?}", adapter.get_info())
+    }
 }
